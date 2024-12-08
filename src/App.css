@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  background-image: url('../src/assets/images/black-golden-marble-background/5459923.jpg');
+  background-size: cover; /* Ensures the image covers the whole area */
+  background-repeat: no-repeat; 
+  background-position: center center;
+  background-attachment: fixed;
+  --bg-color: #0000002f;
+  --text-color: #ffffff;
+  --accent-color: #f4d23b;
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --nav-bg: rgba(10, 10, 10, 0.5);
+  backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+   transition:backdrop-filter 0.5s ease,-webkit-backdrop-filter 0.3s;
+ 
+}
+
+.light {
+  background-image: url('');
+  background-size: cover; /* Ensures the image covers the whole area */
+  background-repeat: no-repeat; 
+  background-position: center center;
+  background-attachment: fixed;
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --accent-color: #c38a21;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --nav-bg: rgba(180, 179, 179, 0.8);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.5s ease-in-out, color 0.5s ease;
+}
+
+
+.app {
+  min-height: 100vh;
+  overflow-x: hidden;
+ 
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 2rem 0;
+  transform-style: preserve-3d;
+}
+
+.parallax-bg,
+.parallax-bg2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.parallax-bg {
+  background: radial-gradient(circle, rgba(100,255,218,0.1) 0%, rgba(10,10,10,0) 70%);
+}
+
+.parallax-bg2 {
+  background: radial-gradient(circle, rgba(255, 250, 100, 0.1) 0%, rgba(10,10,10,0) 70%);
+}
+
+.light .parallax-bg {
+  background: radial-gradient(circle, rgba(255, 230, 107, 0.1) 0%, rgba(245,245,245,0) 70%);
+}
+
+.light .parallax-bg2 {
+  background: radial-gradient(circle, rgba(107,107,255,0.1) 0%, rgba(245,245,245,0) 70%);
+}
+
+.backdrop-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(30deg, var(--accent-color) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.app.scrolled .backdrop-gradient {
+  opacity: 0.3;
+}
+
+.light .backdrop-gradient {
+  background: linear-gradient(45deg, var(--accent-color) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+

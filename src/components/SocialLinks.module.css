@@ -1,0 +1,20 @@
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  backdrop-filter: blur(10px);
+}
+
+.socialLinks a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.socialLinks a:hover {
+  color: var(--accent-color);
+}
+
